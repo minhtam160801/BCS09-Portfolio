@@ -1,0 +1,152 @@
+header .collapse .nav-link {
+    color: white;
+    position: relative;
+    transition: all 0.5s;
+}
+header .navbar-nav .nav-link.active {
+    color: green;
+}
+header .navbar-nav .nav-link.active::before {
+    width: 100%;
+}
+header .collapse .nav-link::before {
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 3px;
+    background-color: green;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: all 0.5s;
+}
+header .collapse .nav-item {
+    margin: 0 10px;
+}
+header .collapse .nav-link:hover::before {
+    width: 100%;
+}
+header .collapse .nav-link:hover {
+    color: green;
+}
+/* carousel */
+.cyber_carousel .carousel-inner {
+    height: 100vh;
+}
+.cyber_carousel .carousel-inner img {
+    height: 100%;
+    object-fit: cover;
+}
+.cyber_carousel .carousel-inner .carousel-caption img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.cyber_carousel .carousel-caption h5 {
+    font-size: 50px;
+}
+.cyber_carousel .carousel-caption p {
+    font-size: 24px;
+}
+.cyber_carousel .carousel-caption {
+    /* left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%; */
+    background-color: rgb(39 43 54 / 50%);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex !important;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+.project .project_content ul .nav-link.active {
+    color: white !important;
+    background-color: #35A22C;
+    border-color: #35A22C !important;
+}
+/* .grid_demo {
+    background-color: blue;
+    height: 100px;
+} */
+.project .project_content .tab-content .card {
+    border: unset;
+}
+.project .project_content .tab-content .card .card-body {
+    transition: all 0.5s;
+    border: 1px solid transparent;
+    border-top: unset;
+    border-radius: 0 0 6px 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.project .project_content .tab-content .card:hover .card-body {
+    border-color: #35A22C;
+}
+/* available */
+.available {
+    background-image: url(../image/3.jpg);
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+}
+.available .avai_overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(7,10,12,.72);
+}
+.available .container {
+    z-index: 8;
+    position: relative;
+}
+.available .avai_content .col-12 .avai_item {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 1.5px );
+    -webkit-backdrop-filter: blur( 1.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: 50px 30px;
+}
+.available .avai_item i {
+    color: #35A22C;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+/* min width sẽ xd độ dài từ min width tới + vô cực */
+@media screen and (min-width:576px) {
+    .cyber_carousel h5 {
+        color: red;
+    }
+    .project_title h2 {
+        color: orange;
+    }
+}
+@media screen and (min-width:1200px) {
+    .project_title h2 {
+        color: red;
+    }
+}
+/* max width sẽ xd độ dài từ 0 tới số đc truyền vào
+max width đc sd khi tạo ra các giao diện cho những thiết bị có màn hình lớn */
+/* khi sd maxx wwidth các vùng tb nhỏ hơn sẽ đc viết ở dưới để khi độ ưu tiên bằng nhau thì thg ở dưới sẽ thắng */
+@media screen and (max-width: 992px) {
+    .cyber_carousel .carousel-caption h5 {
+        font-size: 35px;
+    }
+    header .navbar-brand span {
+        color: red !important;
+    }
+}
+/* thiết bị di động  */
+@media screen and (max-width: 576px) {
+    header .navbar-brand span {
+        color: yellow !important;
+    }    
+}
